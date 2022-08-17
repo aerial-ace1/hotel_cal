@@ -1,10 +1,14 @@
 html, body{
-    color: black;
+    color: rgba(255,255,255,0.4);
+
+    text-transform: uppercase;
     margin: 0px;
     padding: 0px;
     scroll-behavior: smooth;
     text-align: center;
     background-color: #000000;
+    font-family: 'Inter', sans-serif;
+    font-weight: 800;
     /*background-image: linear-gradient(160deg, #0093E9 0%, #80D0C7 100%); */
     
     
@@ -19,9 +23,12 @@ html, body{
 
 }
 #name{
-    font-size: 5rem;
+    font-family: "Playfair Display", sans-serif;
+    z-index: 1;
+    font-size: 9rem;
+    font-weight: 900;
     position: absolute;
-    top: 50%;
+    top: 30%;
     left: 50%;
     transform: translate(-50%, -50%);
 }
@@ -41,14 +48,15 @@ html, body{
     top: 0px;
     padding: auto;
     z-index: 4;
-    background-color: black;
-    font-family: monospace;
-    font-size: 20px;
+    background-color: #000000;
+    font-size: 2rem;
 
 }
 
 .navbar div a{
-    color: white;
+    margin: 5px;
+    padding: 10px;
+    color: yellow;
     text-decoration: none;
     transition: all 0.6 ease-out;
 }
@@ -74,11 +82,15 @@ html, body{
         align-items: center;
         align-content: center;
     }
+    .dish{
+        width: 30vw;
+        height: 50vh;
+    }
 }
 
 @media (orientation: portrait){
     .navbar{
-        height: 150px;
+        height: 50px;
         width: 100vw;
         
         display: flex;
@@ -88,8 +100,12 @@ html, body{
         align-items: center;
         align-content: center;
     }
-    #Description, #hidden{
+    #Description, #hidden, #name{
         display: none;
+    }
+    .dish{
+        width: 30vw;
+        height: 10vh;
     }
 }
 
@@ -102,19 +118,23 @@ html, body{
 }
 
 #dishes{
-    
     width: 100vw;
     display: grid;
     grid-template-columns: auto auto;
     justify-content: center;
 }
 
+#dishes h1 {
+    text-transform: capitalize;
+    font-family: "Playfair Display", serif;
+    font-size: 2.5rem;
+}
+
 
 .dish{
-    margin: 10vw;
+
+    margin: 15vw;
     border:solid #000000 5px;
-    width: 30vw;
-    height: 30vh;
 }
 
 .dishimg{
